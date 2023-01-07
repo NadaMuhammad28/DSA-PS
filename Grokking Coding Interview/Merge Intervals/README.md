@@ -1,1 +1,1 @@
-![visualization]('../../public/intervals.png')
+![visualization](../../public/intervals.png)
