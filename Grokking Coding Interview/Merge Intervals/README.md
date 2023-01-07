@@ -1,1 +1,1 @@
-![visualization](../../public/intervals.png)
+![visualization](intervals.png)
