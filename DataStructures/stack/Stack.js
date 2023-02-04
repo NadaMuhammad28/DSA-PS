@@ -30,8 +30,6 @@ class Stack {
     if (this.isEmpty()) return console.log("stack is empty");
     console.log(this.items);
   }
-
-  get;
 }
 
 //BY POINTER
