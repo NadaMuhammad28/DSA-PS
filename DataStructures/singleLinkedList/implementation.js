@@ -1,4 +1,3 @@
-// import { Node } from "./node";
 class Node {
   constructor(val) {
     this.value = val;
@@ -148,26 +147,6 @@ class LinkedList {
     }
     console.log(prev);
     this.head = prev;
-    return this.head;
-  }
-
-  reverse2() {
-    if (this.isEmpty()) console.log("Empty");
-    let copy = Object.assign(this.head);
-    let prev = null;
-
-    let current = copy;
-    while (current) {
-      let next = current.next;
-      //reverse
-      current.next = prev;
-      //advance prev
-      prev = current;
-      //advance cur
-      current = next;
-    }
-    console.log(prev);
-    copy = prev;
     return this.head;
   }
 
