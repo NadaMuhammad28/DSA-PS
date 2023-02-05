@@ -50,6 +50,3 @@ console.log(s.top());
 console.log(s.getMin());
 //t-c--> o(1)
 //s-c-->
-
-let w = "pp";
-w.localeCompare();
