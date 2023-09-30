@@ -48,3 +48,5 @@ class IntervalsOPerations{
 const intervals = [new Interval(6,7), new Interval(2,4),new Interval(5,9)]
 const intervalsOPerations = new IntervalsOPerations()
 console.log(intervalsOPerations.mergeIntervals(intervals));
+
+// time complexity ==> o(nlogn)
