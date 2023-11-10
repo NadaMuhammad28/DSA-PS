@@ -1,0 +1,21 @@
+{
+  "name": "ps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "p.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NadaMuhammad28/How-I-solved-this.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NadaMuhammad28/How-I-solved-this/issues"
+  },
+  "homepage": "https://github.com/NadaMuhammad28/How-I-solved-this#readme"
+}

@@ -6,7 +6,6 @@ const slidingWindow = (arr, k) => {
   let windowStart = 0;
   let sum = 0;
   let res = [];
-
   for (let windowEnd = 0; windowEnd < arr.length; windowEnd++) {
     sum += arr[windowEnd];
     if (windowEnd >= k - 1) {
@@ -49,42 +48,6 @@ const maxSum = (arr, k) => {
 
 //-------------------------------------------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------------------------------------------------
-// const Sequivelant = (arr, s) => {
-//   let sum = 0;
-//   let windowStart = 0;
-//   let from = 0;
-//   let to = 0;
-//   let msum = Infinity;
-//   for (let windowEnd = 0; windowEnd < arr.length; windowEnd++) {
-//     sum += arr[windowEnd];
-
-//     while (sum >= s) {
-//       msum = Math.min(msum, windowEnd - windowStart + 1);
-
-//       sum -= arr[windowStart];
-//       windowStart++;
-//     }
-//   }
-//   return console.log("length " + msum);
-// };
-
-// const Sequivelant = (arr, s) => {
-//   let windowStart = 0;
-//   let sum = 0;
-//   let length = Infinity;
-
-//   for (let i = 0; i < arr.length; i++) {
-//     sum += arr[i];
-//     // if(sum>= s){
-//     while (sum >= s) {
-//       length = Math.min(length, i - windowStart + 1);
-//       sum -= arr[windowStart];
-//       windowStart++;
-//     }
-//   }
-//   return length;
-// };
-
 const Sequivelant = (arr, s) => {
   let windowStart = 0;
   let length = Infinity;
@@ -100,16 +63,41 @@ const Sequivelant = (arr, s) => {
   }
   return length;
 };
-console.log(Sequivelant([3, 4, 1, 1, 6], 8));
+// console.log(Sequivelant([3, 4, 1, 1, 6], 8));
+//-------------------------------------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------------------------
+//Given a string, find the length of the longest substring in it with no more than K distinct characters.
 
+//-------------------------------------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------------------------
+
+// const longestSubString = (word, k) => {
+//   let windowStart = 0;
+//   let m = new Map();
+//   let max = 0;
+//   for (let windowEnd = 0; windowEnd < word.length; windowEnd++) {
+//     m.get(word[windowEnd])
+//       ? m.set(word[windowEnd], m.get(word[windowEnd]) + 1)
+//       : m.set(word[windowEnd], 1);
+
+//     while (m.size > k) {
+//       m.get(word[windowStart]) > 1
+//         ? m.set(word[windowStart], m.get(word[windowStart]) - 1)
+//         : m.delete(word[windowStart]);
+//       windowStart++;
+//     }
+//     max = Math.max(max, windowEnd - windowStart + 1);
+//   }
+//   return max;
+// };
+
+//araaki  2
 const longestSubString = (word, k) => {
-  let windowStart = 0;
   let m = new Map();
-  let max = 0;
-  for (let windowEnd = 0; windowEnd < word.length; windowEnd++) {
-    m.get(word[windowEnd])
-      ? m.set(word[windowEnd], m.get(word[windowEnd]) + 1)
-      : m.set(word[windowEnd], 1);
+  let windowStart = 0;
+  let len = 0;
+  for (let i = 0; i < word.length; i++) {
+    m.has(word[i]) ? m.set(word[i], m.get(word[i]) + 1) : m.set(word[i], 1);
 
     while (m.size > k) {
       m.get(word[windowStart]) > 1
@@ -117,15 +105,19 @@ const longestSubString = (word, k) => {
         : m.delete(word[windowStart]);
       windowStart++;
     }
-    max = Math.max(max, windowEnd - windowStart + 1);
+    len = Math.max(len, i - windowStart + 1);
   }
-  return max;
+  return len;
 };
-
-// console.log(longestSubString("araaci", 2));
+console.log(longestSubString("araaaaaaaci", 1));
+//-------------------------------------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------------------------
 
 //Given a string, find the length of the longest
 //substring, which has all distinct characters.
+//-------------------------------------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------------------------
+
 const lSub = (word) => {
   let windowStart = 0;
   let max = 0;

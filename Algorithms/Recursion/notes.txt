@@ -1,0 +1,17 @@
+- what is recursion?
+  technique in which a solution of a big problem is dependant on solution of sub problems inside of it
+ 
+
+ - what do we need to achieve a recursive function?
+   -- a base case which would stop the recursive calls
+   --recursive calls inside of that function
+  
+ - Iteration VS recursion
+ -- any iterative function could be recursive instead
+  --recursion --> elegant, more readable (idk how come), less code
+  -- recursion --> calling function is more memory  consuming than loops
+
+
+
+  - time complexity 
+  READ: https://www.codingninjas.com/codestudio/library/recursion-backtracking-time-complexity

@@ -1,0 +1,16 @@
+1- create class P for generating point object
+2- recatnglesCount function
+  -input: list of points
+  - output: size of the set ds (reactgles count)
+  1- create a new set dor recatnglesCount
+
+  2- nested loops to extract all opposite coordinates(diagonal of a rectangle)
+     -after checking that two points are opposite--> calls helper function to check how many rectangles we can form with this diagonal and the rest of the points
+
+
+  3- create a helper function-->
+  -input --> diagonal points
+    -adds the diagonal of the rectangle to the set.
+    -checks rest of points (looping)
+    - if the point inside the rectangle--> the function recursivly calls itself to check new rectangles
+  

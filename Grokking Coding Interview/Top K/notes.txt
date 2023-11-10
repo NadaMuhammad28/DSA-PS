@@ -1,0 +1,8 @@
+ - find the top/smallest/frequent ‘K’ elements among a given set falls under this pattern.
+- The best data structure that comes to mind to keep track of ‘K’ elements is Heap.
+
+
+Problems:
+1- Top K numbers:
+   Given an unsorted array of numbers, find the ‘K’ largest numbers in it.
+

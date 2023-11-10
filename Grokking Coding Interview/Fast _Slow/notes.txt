@@ -1,0 +1,8 @@
+- when and where to use it ?
+-- cyclic linked lists
+-- sequence Ds (linked lists & arrays)
+
+- Famous problems 
+1- find if a linkedlist is cyclic
+
+
