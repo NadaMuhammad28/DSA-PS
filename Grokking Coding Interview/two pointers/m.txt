@@ -1,0 +1,13 @@
+Ideas:
+-sorted array --> two pointers
+
+
+Questions:
+ 1- Given an array of sorted numbers and a target sum, find a pair in the array whose sum is equal to the given target.
+    could be solved in two ways:
+     1- sorted--> hash table, two pointers t-c: o(n) s-c: o(1)
+     2- not sorted --> hash table (two sum leetcode) t-c: o(n) s-c: o(n )
+
+
+
+2 - Given an array of sorted numbers, remove all duplicates from it. You should not use any extra space; after removing the duplicates in-place return the new length of the array.
